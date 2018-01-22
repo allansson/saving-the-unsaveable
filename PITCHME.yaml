@@ -6,8 +6,7 @@
 #
 theme : sky
 theme-override : assets/css/PITCHME.css
-logo : assets/image/logo.png
 highlight : hybrid
-transition : none
-published : true
-footnote : "GitPitch [ Sky ] Presentation Template"
+transition : slide
+published : false
+footnote: 'Copyright© 2018'
