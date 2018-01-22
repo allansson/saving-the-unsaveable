@@ -192,11 +192,12 @@ Note:
 +++
 ### 2015
 
-_JavaScript-Framework-of-the-Month-movement has gained momentum_
+_JSFotM-movement has gained momentum_
 
 ![System architecture](assets/system_arch/02.png)
 
 Note:
+JavaScript Framework of the Month
 Grunt, Gulp, Webpack
 jQuery-Knockout-Angular-React
 
