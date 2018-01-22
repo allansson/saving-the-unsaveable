@@ -1,11 +1,13 @@
 # Saving the unsaveable
-## How to rewrite without losing all hope
+How to survive the rewrite without losing all hope
 
 ---
 <!-- .slide: data-background-transition="none" -->
+## Life of a system
 
-#### Life of a system
-1994
++++
+<!-- .slide: data-background-transition="none" -->
+### 1994
 
 _Pre-web desktop client_
 
@@ -15,11 +17,7 @@ Note:
 Just a thin client directly over a database.
 
 +++
-<!-- .slide: data-background-transition="none" -->
-
-#### Life of a system
-
-1999
+### 1999
 
 _Web portal in ASP and VB6_
 
@@ -30,10 +28,7 @@ Web is not useful enough to do everything the desktop client does.
 
 +++
 <!-- .slide: data-background-transition="none" -->
-
-#### Life of a system
-
-2000
+### 2000
 
 _Integrate with 3rd parties by using file exports_
 
@@ -44,10 +39,7 @@ Mixture of VBScript and scheduled tasks
 
 +++
 <!-- .slide: data-background-transition="none" -->
-
-#### Life of a system
-
-2002
+### 2002
 
 _Rewrite web portal using ASP.NET and WebForms_
 
@@ -59,10 +51,7 @@ Web is pretending it can be useful enough
 
 +++
 <!-- .slide: data-background-transition="none" -->
-
-#### Life of a system
-
-2004
+### 2004
 
 _We need more reports!_
 
@@ -74,10 +63,7 @@ Somewhere, somehow a job is running each night to build "the cube"
 
 +++
 <!-- .slide: data-background-transition="none" -->
-
-#### Life of a system
-
-2005
+### 2005
 
 _File integrations are upgraded to SSIS_
 
@@ -88,9 +74,6 @@ Note:
 
 +++
 <!-- .slide: data-background-transition="none" -->
-
-#### Life of a system
-
 2005
 
 _There are whispers of something called SOAP_
