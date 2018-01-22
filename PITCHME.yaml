@@ -7,6 +7,6 @@
 #theme : sky
 #theme-override : assets/css/PITCHME.css
 highlight : hybrid
-transition : slide
+transition : none
 published : false
 footnote: 'Copyright© 2018'

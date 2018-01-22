@@ -11,7 +11,7 @@ How to survive the rewrite without losing all hope
 _Pre-web desktop client_
 
 <!-- .slide: data-background-transition="none" -->
-![System architecture](assets/system_arch_001.png)
+![System architecture](assets/system_arch/15.png)
 
 Note:
 Just a thin client directly over a database.
@@ -21,9 +21,9 @@ Just a thin client directly over a database.
 
 _Web portal in ASP and VB6_
 
-![System architecture](assets/system_arch_001.png)
+![System architecture](assets/system_arch/14.png)
 
-Note:
+Note:14
 Web is not useful enough to do everything the desktop client does.
 
 +++
@@ -33,7 +33,7 @@ Web is not useful enough to do everything the desktop client does.
 _Integrate with 3rd parties by using file exports_
 
 <!-- .slide: data-background-transition="none" -->
-![System architecture](assets/system_arch_001.png)
+![System architecture](assets/system_arch/13.png)
 
 Note:
 Mixture of VBScript and scheduled tasks
@@ -44,10 +44,11 @@ Mixture of VBScript and scheduled tasks
 _Rewrite web portal using ASP.NET and WebForms_
 
 <!-- .slide: data-background-transition="none" -->
-![System architecture](assets/system_arch_001.png)
+![System architecture](assets/system_arch/12.png)
 
 Note:
 Still using VB though
+Some clients remain due to very specific features
 Web is pretending it can be useful enough
 
 +++
@@ -56,7 +57,7 @@ Web is pretending it can be useful enough
 _We need more reports!_
 
 <!-- .slide: data-background-transition="none" -->
-![System architecture](assets/system_arch_001.png)
+![System architecture](assets/system_arch/11.png)
 
 Note:
 SSRS and SSAS are added along with a Data Warehouse-database (a.k.a. the cube)
@@ -68,10 +69,10 @@ Somewhere, somehow a job is running each night to build "the cube"
 _File integrations are upgraded to SSIS_
 
 <!-- .slide: data-background-transition="none" -->
-![System architecture](assets/system_arch_001.png)
+![System architecture](assets/system_arch/10.png)
 
 Note:
-
+Not all jobs are migrated
 
 +++
 ### 2005
@@ -79,8 +80,136 @@ Note:
 _There are whispers of something called SOAP_
 
 <!-- .slide: data-background-transition="none" -->
-![System architecture](assets/system_arch_001.png)
+![System architecture](assets/system_arch/10.png)
 
 Note:
 First mentions of a rewrite
+
++++
+### 2007
+
+_Rewrite of web portal in ASP.NET MVC_
+
+<!-- .slide: data-background-transition="none" -->
+![System architecture](assets/system_arch/09.png)
+
+Note:
+90% of UI is just the old portal in an iframe
+Sold to a bunch of customers as Next Generation
+
++++
+### 2009
+
+_Source Control is invented!_
+
+![System architecture](assets/system_arch/09.png)
+
+Note:
+
++++
+### 2010
+
+_Yet another rewrite of web portal in MVC is started_
+
+![System architecture](assets/system_arch/08.png)
+
+Note:
+
++++
+### 2011
+
+_We need to use SOA!_
+
+![System architecture](assets/system_arch/07.png)
+
+Note:
+A new database is created
+New API is just a thin wrapper over the new database
+Some attempts to re-use in desktop client
+
++++
+### Late 2012
+
+_New web portal is relased_
+
+![System architecture](assets/system_arch/07.png)
+
+Note:
+Only 40% completed
+
++++
+### Christmas 2012
+
+_Discovered new portal messes up statistics_
+
+![System architecture](assets/system_arch/06.png)
+
+Note:
+A new database sync agent is created to sync data from the new database to the old
+
++++
+### Spring 2013
+
+_Customers complain data updated in old portal is not visible in new portal_
+
+![System architecture](assets/system_arch/05.png)
+
+Note:
+The sync agent is updated to also sync data from the old database to the new
+
++++
+### Spring 2013 + 1 weeks
+
+_Database gets corrupted due to old data being synced is synced back again_
+
+![System architecture](assets/system_arch/04.png)
+
+Note:
+Database backup restored. One week of customer data lost.
+Sync job is fixed
+The code is a nightmare
+
++++
+### Spring 2013 + 2 weeks
+
+_Management bans "rewrite" from corporate dictionary_
+
+![System architecture](assets/system_arch/03.png)
+
+Note:
+Executive decision is that migrating from old database is not an option
+
+
++++
+### Spring 2013 + 3 weeks
+
+_Developers start talking about refactoring_
+
+![System architecture](assets/system_arch/02.png)
+
+Note:
+
++++
+### 2015
+
+_Framwork-of-the-week movement has gained momentum_
+
+![System architecture](assets/system_arch/02.png)
+
+Note:
+Grunt, Gulp, Webpack
+jQuery-Knockout-Angular-React
+
++++
+### 2016
+
+_We need to be Microservice-compliant_
+
+![System architecture](assets/system_arch/01.png)
+
+Note:
+
+
+
+
 
