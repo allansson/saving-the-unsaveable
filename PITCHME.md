@@ -3,9 +3,9 @@
 
 +++
 
-# Life of a system
+### Life of a system
 
-## 1994
+#### 1994
 
 Pre-web desktop client
 
@@ -16,9 +16,9 @@ Just a thin client directly over a database.
 
 +++
 
-# Life of a system
+### Life of a system
 
-## 1999
+#### 1999
 
 Web portal in ASP and VB6
 
@@ -29,9 +29,9 @@ Web is not useful enough to do everything the desktop client does.
 
 +++
 
-# Life of a system
+### Life of a system
 
-## 2000
+#### 2000
 
 ![System architecture](assets/system_arch_001.png)
 
