@@ -185,14 +185,14 @@ Executive decision is that migrating from old database is not an option
 
 _Developers start talking about refactoring_
 
-![System architecture](assets/system_arch/02.png)
+![System architecture](assets/system_arch/03.png)
 
 Note:
 
 +++
 ### 2015
 
-_Framwork-of-the-week movement has gained momentum_
+_JavaScript-Framework-of-the-Month-movement has gained momentum_
 
 ![System architecture](assets/system_arch/02.png)
 
@@ -208,6 +208,14 @@ _We need to be Microservice-compliant_
 ![System architecture](assets/system_arch/01.png)
 
 Note:
+
+### 2018
+
+_You are hired to clean up this mess!_
+
+![System architecture](assets/system_arch/01.png)
+
+
 
 
 
