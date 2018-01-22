@@ -4,8 +4,8 @@
 # For details, visit Wiki:
 # https://github.com/gitpitch/gitpitch/wiki/Slideshow-Settings
 #
-theme : sky
-theme-override : assets/css/PITCHME.css
+#theme : sky
+#theme-override : assets/css/PITCHME.css
 highlight : hybrid
 transition : slide
 published : false

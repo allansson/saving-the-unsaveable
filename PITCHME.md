@@ -2,9 +2,9 @@
 ## How to rewrite without losing all hope
 
 ---
+<!-- .slide: data-background-transition="none" -->
 
 #### Life of a system
-<!-- .slide: data-background-transition="none" -->
 1994
 
 _Pre-web desktop client_
