@@ -4,7 +4,7 @@
 ---
 
 #### Life of a system
-
+<!-- .slide: data-background-transition="none" -->
 1994
 
 _Pre-web desktop client_
@@ -15,6 +15,7 @@ Note:
 Just a thin client directly over a database.
 
 +++
+<!-- .slide: data-background-transition="none" -->
 
 #### Life of a system
 
@@ -28,17 +29,74 @@ Note:
 Web is not useful enough to do everything the desktop client does.
 
 +++
+<!-- .slide: data-background-transition="none" -->
 
 #### Life of a system
 
 2000
 
-![System architecture](assets/system_arch_001.png)
-
 _Integrate with 3rd parties by using file exports_
+
+![System architecture](assets/system_arch_001.png)
 
 Note:
 Mixture of VBScript and scheduled tasks
 
 +++
+<!-- .slide: data-background-transition="none" -->
+
+#### Life of a system
+
+2002
+
+_Rewrite web portal using ASP.NET and WebForms_
+
+![System architecture](assets/system_arch_001.png)
+
+Note:
+Still using VB though
+Web is pretending it can be useful enough
+
++++
+<!-- .slide: data-background-transition="none" -->
+
+#### Life of a system
+
+2004
+
+_We need more reports!_
+
+![System architecture](assets/system_arch_001.png)
+
+Note:
+SSRS and SSAS are added along with a Data Warehouse-database (a.k.a. the cube)
+Somewhere, somehow a job is running each night to build "the cube"
+
++++
+<!-- .slide: data-background-transition="none" -->
+
+#### Life of a system
+
+2005
+
+_File integrations are upgraded to SSIS_
+
+![System architecture](assets/system_arch_001.png)
+
+Note:
+
+
++++
+<!-- .slide: data-background-transition="none" -->
+
+#### Life of a system
+
+2005
+
+_There are whispers of something called SOAP_
+
+![System architecture](assets/system_arch_001.png)
+
+Note:
+First mentions of a rewrite
 
