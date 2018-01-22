@@ -11,7 +11,7 @@ How to survive the rewrite without losing all hope
 
 _Pre-web desktop client_
 
-![System architecture](assets/system_arch_001.png)
+![System architecture](image=assets/system_arch_001.png)
 
 Note:
 Just a thin client directly over a database.
@@ -21,7 +21,7 @@ Just a thin client directly over a database.
 
 _Web portal in ASP and VB6_
 
-![System architecture](assets/system_arch_001.png)
+![System architecture](image=assets/system_arch_001.png)
 
 Note:
 Web is not useful enough to do everything the desktop client does.
@@ -32,7 +32,7 @@ Web is not useful enough to do everything the desktop client does.
 
 _Integrate with 3rd parties by using file exports_
 
-![System architecture](assets/system_arch_001.png)
+![System architecture](image=assets/system_arch_001.png)
 
 Note:
 Mixture of VBScript and scheduled tasks
@@ -43,7 +43,7 @@ Mixture of VBScript and scheduled tasks
 
 _Rewrite web portal using ASP.NET and WebForms_
 
-![System architecture](assets/system_arch_001.png)
+![System architecture](image=assets/system_arch_001.png)
 
 Note:
 Still using VB though
@@ -55,7 +55,7 @@ Web is pretending it can be useful enough
 
 _We need more reports!_
 
-![System architecture](assets/system_arch_001.png)
+![System architecture](image=assets/system_arch_001.png)
 
 Note:
 SSRS and SSAS are added along with a Data Warehouse-database (a.k.a. the cube)
@@ -67,7 +67,7 @@ Somewhere, somehow a job is running each night to build "the cube"
 
 _File integrations are upgraded to SSIS_
 
-![System architecture](assets/system_arch_001.png)
+![System architecture](image=assets/system_arch_001.png)
 
 Note:
 
@@ -78,7 +78,7 @@ Note:
 
 _There are whispers of something called SOAP_
 
-![System architecture](assets/system_arch_001.png)
+![System architecture](image=assets/system_arch_001.png)
 
 Note:
 First mentions of a rewrite
