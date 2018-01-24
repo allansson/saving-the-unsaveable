@@ -287,7 +287,59 @@ Note:
 ---
 ## Avoiding the pitfall
 
-- Don't kid yourself
-- Question your own knowledge
-  - how you write code
-  - how your business operates         |
+- Don't kid yourself            |
+- Question your own knowledge   |
+  - how you write code          |
+  - how your business operates  |
+- Start small                   |
+
+Note:
+Pride goes before a fall
+
+---
+## Starting small
+
+How do you find a good spot when everything is tangled together?
+
+![Jenga](assets/jenga.jpg)
+
++++
+## Starting small
+
+![Spider-in-the-web](assets/database.png)
+_The heart of every system_
+
+Note:
+Every system implements its own logic, and access the database in its own way.
+
++++
+## Starting small
+
+*_Warning_*: Don't create a data access service. 
+
+Note:
+It is not a small task
+All systems will still be tied to the database
+Added network latency and instability
+Code will not improve
+"Let's throw some SOAP/REST/GraphQL on it"
+
++++
+## Starting small
+
+Why is a shared database so bad?
+
+- _Hard_ to ensure data is always correct       |
+- _Easy_ to unknowingly break other systems     |
+- _Hard_ to write and read from it efficiently  |
+
+Note:
+Microservices _demand_ that databases not be shared
+
+Adding a NOT NULL-column to a table, with no DEFAULT
+
+It is not possible to make a god-model of a business and expect it to fit
+every use-case. 
+
+## Starting small
+
