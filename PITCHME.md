@@ -233,10 +233,61 @@ _You are hired to clean up this mess!_
 
 Note:
 
+---
+## What can a poor developer do?
+
+- Toxic sentiments |
+  - "We'll rewrite this code soon anyway" |
+  - "This code is s**t anyway, just do a dirty hack" |
+  - "Easier to rewrite it all" |
+
++++
+## What can a poor developer do?
+
+> The only thing necessary for the triumph of evil is for good men to do nothing.
+>
+> _Edmund Burke_
 
 ---
+## The rewrite fallacy
 
+> "It would be easier to rewrite the entire thing than to continue working
+> with the code as it is today"
 
++++
+## The rewrite fallacy
 
+> If you think you understand quantum mechanics, then you don't understand quantum mechanics.
+>
+> _Richard Feynman_
 
+> The only true wisdom is knowing you know nothing.
+>
+> _Socrates_
 
+## The rewrite fallacy
+
+- Software accumulates knowledge over time |
+- All those quirks mattered at some point |
+- Odds are nobody remembers why |
+
+---
+## The rewrite pitfall
+
+- The rewrite is granted!
+- Developers rejoice! |
+- New git repository created |
+- The hacking starts
+
++++
+## The rewrite pitfall
+
+18 months of work. Implemented the exact same system, but used REST instead of SOAP.
+
+---
+## Avoiding the pitfall
+
+- 
+- Question your own knowledge
+  - how you write code
+  - how your business operates         |
