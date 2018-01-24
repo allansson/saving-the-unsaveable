@@ -12,8 +12,7 @@ How to survive the rewrite without losing all hope
 
 Note:
 
-
---
+---
 
 ## Life of a system
 
