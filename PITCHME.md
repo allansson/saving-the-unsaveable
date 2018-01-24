@@ -261,10 +261,14 @@ Note:
 >
 > _Richard Feynman_
 
++++
+## The rewrite fallacy
+
 > The only true wisdom is knowing you know nothing.
 >
 > _Socrates_
 
++++
 ## The rewrite fallacy
 
 - Software accumulates knowledge over time |
@@ -274,10 +278,10 @@ Note:
 ---
 ## The rewrite pitfall
 
-- The rewrite is granted!
-- Developers rejoice! |
-- New git repository created |
-- The hacking starts
+- The rewrite is granted!       |
+- Developers rejoice!           |
+- New git repository created    |
+- The hacking starts            |
 
 +++
 ## The rewrite pitfall
@@ -306,8 +310,8 @@ How do you find a good spot when everything is tangled together?
 +++
 ## Starting small
 
-![Spider-in-the-web](assets/database.png)
 _The heart of every system_
+![Spider-in-the-web](assets/database.png)
 
 Note:
 Every system implements its own logic, and access the database in its own way.
@@ -329,9 +333,9 @@ Code will not improve
 
 Why is a shared database so bad?
 
-- _Hard_ to ensure data is always correct       |
-- _Easy_ to unknowingly break other systems     |
-- _Hard_ to write and read from it efficiently  |
+- Hard to ensure data is always correct       |
+- Easy to unknowingly break other systems     |
+- Hard to write and read from it efficiently  |
 
 Note:
 Microservices _demand_ that databases not be shared
