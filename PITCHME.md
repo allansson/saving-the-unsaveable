@@ -287,7 +287,7 @@ Note:
 ---
 ## Avoiding the pitfall
 
-- 
+- Don't kid yourself
 - Question your own knowledge
   - how you write code
   - how your business operates         |
