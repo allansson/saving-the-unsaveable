@@ -2,6 +2,19 @@
 How to survive the rewrite without losing all hope
 
 ---
+
+## My experience
+
+* Worked at 4 widely different companies |
+* Youngest codebase 6+ years |
+* Weirdly similar problems |
+* Efforts of lots of well meaning developers over the years
+
+Note:
+
+
+--
+
 ## Life of a system
 
 +++
@@ -23,7 +36,7 @@ _Web portal in ASP and VB6_
 
 ![System architecture](assets/system_arch/14.png)
 
-Note:14
+Note:
 Web is not useful enough to do everything the desktop client does.
 
 +++
@@ -168,6 +181,7 @@ Note:
 Database backup restored. One week of customer data lost.
 Sync job is fixed
 The code is a nightmare
+This will become a scar in the organization
 
 +++
 ### Spring 2013 + 2 weeks
@@ -216,7 +230,7 @@ _You are hired to clean up this mess!_
 
 ![System architecture](assets/system_arch/01.png)
 
-
+Note:
 
 
 
