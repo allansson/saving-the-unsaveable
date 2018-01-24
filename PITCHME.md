@@ -310,8 +310,10 @@ How do you find a good spot when everything is tangled together?
 +++
 ## Starting small
 
-_The heart of every system_
 ![Spider-in-the-web](assets/database.png)
+
+_The heart of every system_
+
 
 Note:
 Every system implements its own logic, and access the database in its own way.
