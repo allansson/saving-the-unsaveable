@@ -603,7 +603,7 @@ The append-only log
 +++
 ## Event Sourcing
 
-- Save each change (event) instead of state |
+- Save each change (event) instead overwriting current state |
 - A log of changes to an entity             |
 - A global log of all changes               |
 
