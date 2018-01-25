@@ -716,7 +716,7 @@ using (eventStore.BeginTransaction())
 
 Replication
 
-- `SELECT TOP 10 * FROM Events WHERE SequenceId > @LastProcessedId`
+- `SELECT TOP 10 * FROM Events WHERE SequenceId > @LastProcessedId` |
 - Run it in a thread |
 
 +++
