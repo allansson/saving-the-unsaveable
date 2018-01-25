@@ -716,4 +716,20 @@ Gotchas
 
 - Eventual consistency                    |
 - Separate projections from side-effects  |
+- Tooling is not the best                 |
 
+---
+## In conclusion
+
+- Solve many small problems
+- Reading data is easy
+- Focus on re-writing writes only
+- Event sourcing lets you be
+  - flexible and
+  - reliable
+
+
++++
+
+
+# The End
