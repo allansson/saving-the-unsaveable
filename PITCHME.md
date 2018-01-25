@@ -23,7 +23,6 @@ Note:
 ## Life of a system
 
 +++
-
 ### 1994
 
 _Pre-web desktop client_
@@ -313,8 +312,9 @@ Need to figure out _every single one_ of those quirks up-front
 Note:
 Pride goes before a fall
 
----
+Businesses can assume that the way the system works is the only way it CAN work
 
+---
 ## Thinking differently
 
 > Those who cannot remember the past are condemned to repeat it
@@ -367,6 +367,7 @@ Note:
 The extreme end
 Each use-case can (theoretically) use its own tech-stack
 
++++
 ## Thinking differently
 
 Separate read and write
