@@ -658,6 +658,42 @@ Keep a version of the Order to enable optimistic concurrency
 +++
 ## Event Sourcing
 
+Order Repository
+
+```csharp
+var events = eventStore.ByStreamId("1234");
+var order = new Order();
+
+foreach (var ev in events)
+{
+  order.Apply(ev);
+  order.Version += 1;
+}
+
+```
+
++++
+## Event Sourcing
+
+Commit
+
+```csharp
+var changes = commandHandler.Handle(command);
+var version = changes.FromVersion + 1;
+
+using (eventStore.BeginTransaction())
+{
+  foreach (var ev in changes)
+  {
+    eventStore.Append(changes.StreamId, version);
+    version += 1;
+  }
+}
+```
+
++++
+## Event Sourcing
+
 Replication
 
 - `SELECT TOP 10 * FROM Events WHERE SequenceId > @LastProcessedId`
@@ -666,7 +702,7 @@ Replication
 +++
 ## Event Sourcing
 
-Pipeline, revisited again
+Pipeline, revisited yet again
 
 1. _Apply command_
 2. Commit changes
