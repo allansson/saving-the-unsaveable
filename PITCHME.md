@@ -742,10 +742,10 @@ Replicate to the old database!
 
 Deterministic
 
-- If we get it wrong:
-  - Fix code
-  - Reset @LastProcessedId to zero
-  - Data is automatically fixed
+- If we get it wrong:               |
+  - Fix code                        |
+  - Reset @LastProcessedId to zero  |
+  - Data is automatically fixed     |
 
 +++
 ## Event Sourcing
@@ -771,6 +771,7 @@ Low risk
 Gotchas
 
 - Eventual consistency                    |
+- Versioning events                       |
 - Separate projections from side-effects  |
 - Tooling is not the best                 |
 
