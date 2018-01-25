@@ -432,6 +432,26 @@ Commands
 ## Starting small
 
 ```csharp
+public class PlaceOrder : Command
+{
+  public string CustomerId;
+  public int[] Items;
+}
+
+public class OrderPlaced : Event
+{
+  public string OrderNumber;
+  public string CustomerId;
+  public int[] Items;
+}
+```
+
+Note:
+
++++
+## Starting small
+
+```csharp
 public Changes Handle(PlaceOrder command)
 {
   return Changes.Track(new OrderPlaced {
