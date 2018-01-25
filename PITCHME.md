@@ -569,12 +569,11 @@ Thankfully, since we're taking care of writes, not bi-directional anymore.
 
 Pipeline, revisited
 
-...
-3. _Apply command_
-4. Commit changes
-5. On concurrency error, goto 3.
-6. Log command result 
-7. Perform side-effects
+1. _Apply command_
+2. Commit changes
+3. On concurrency error, goto 1.
+4. Perform side-effects
+
 
 - What if our network fails after committing? |
 - How do SQL-databases deal with this?        |
@@ -589,6 +588,11 @@ The append-only log
 - Version control systems do it |
 
 - Why can't our apps do it? |
+
++++
+## Event Sourcing
+
+Write your intent in a log. Then replicate...
 
 +++
 ## Event Sourcing
@@ -614,7 +618,7 @@ Writes:
 
 - Read all events for #1234     |
 - Apply each in order to Order  |
-- Add new events                |
+- Validate and raise events     |
 - Try append at end of log      |
 
 Note:
@@ -633,19 +637,18 @@ Replication
 
 Pipeline, revisited again
 
-...
-3. _Apply command_
-4. Commit changes
-5. On concurrency error, goto 3.
-6. Log command result
+1. _Apply command_
+2. Commit changes
+3. On concurrency error, goto 1.
+4. Log command result
 
 Asynchronously:
-7. Perform side-effects
+5. Perform side-effects
 
 +++
 ## Event Sourcing
 
-Write to the old database!
+Replicate to the old database!
 
 +++
 ## Event Sourcing
