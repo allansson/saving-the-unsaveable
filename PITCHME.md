@@ -627,9 +627,9 @@ All changes for all entities
 
 Available databases:
 
-- EventStore (https://geteventstore.com) |
-- NEventStore           |
-- Apache Kafka(?)       |
+- EventStore (https://geteventstore.com) 
+- NEventStore           
+- Apache Kafka(?)       
 - Simple SQL-table!     |
 
 +++
