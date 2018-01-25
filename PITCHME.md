@@ -610,10 +610,14 @@ The append-only log
 +++
 ## Event Sourcing
 
+Changes to an entity
+
 ![Entity log](assets/event-stream.png)
 
 +++
 ## Event Sourcing
+
+All changes for all entities
 
 ![Global log](assets/global-ordering.png)
 
