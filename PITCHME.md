@@ -3,6 +3,12 @@ How to survive the rewrite without losing all hope
 
 ---
 
+## Disclaimer
+
+_This is probably all very obvious_
+
+
++++
 ## My experience
 
 - Worked at 4 widely different companies                    |
@@ -243,7 +249,7 @@ Note:
 
 Note:
 A change in attitude helps a lot
-
+We need to not be indifferent
 
 +++
 #### What can a poor developer do?
@@ -278,6 +284,9 @@ A change in attitude helps a lot
 - Software accumulates knowledge over time |
 - All those quirks mattered at some point |
 - Odds are nobody remembers why |
+
+Note:
+Need to figure out _every single one_ of those quirks up-front
 
 ---
 ## The rewrite pitfall
@@ -320,8 +329,9 @@ Tried and true
 ![Tried and true](assets/horizontal-design.png)
 
 Note:
+Just take a standard layered application and slap REST/SOAP on it.
 Adding a feature means updating UI, Service, Data and DB
-Must always be deployed 
+Must always be deployed together
 
 +++
 ## Thinking differently
@@ -344,6 +354,7 @@ Vertical pipes!
 
 Note:
 Solve many small problems separately.
+Odds are we only need to fix and deploy a single part.
 
 +++
 ## Thinking differently
@@ -356,6 +367,16 @@ Note:
 The extreme end
 Each use-case can (theoretically) use its own tech-stack
 
+## Thinking differently
+
+Separate read and write
+
+![Read-write](assets/read-write.png)
+
+Note:
+Reads inform user and enables them to decide what to do next
+Writes enact a desired state change in the system
+Allows us to just rewrite our write-logic
 
 ---
 ## Starting small
@@ -373,6 +394,7 @@ Pick one thing the users can do today.
 - Something you spend a long time fixing |
 
 +++
+## Starting small
 
 Give it a name:
 
@@ -383,6 +405,17 @@ Give it a name:
 Note:
 Capturing the intent of the user
 Intent need to be present in the code: PlaceOrder
+
++++
+## Starting small
+
+Analyze
+
+- Who does it?          |
+- What logic is vital?  | 
+- What side-effects does it have? |
+  - Sends an e-mail?
+  - 
 
 ## Starting small
 
@@ -443,10 +476,31 @@ Pipeline:
 4. Commit changes
 5. On concurrency error, goto 3.
 6. Log command result 
+7. Perform side-effects
 
 Note:
 Every command can be treated equally
 Write pipeline once only
+
++++
+## Starting small
+
+Side-effects:
+
+```csharp
+public Changes Handle(Changes changes)
+{
+  foreach(var ev in changes)
+  {
+    switch (ev)
+    {
+      case OrderPlaced e:
+        SendReceipt(e);
+        break;
+    }
+  }
+}
+```
 
 +++
 ## Starting small
