@@ -509,7 +509,7 @@ public Changes Handle(Changes changes)
 ## Starting small
 
 - Make sure every system writes using your new logic. |
-- Rinse and repeat.
+- Rinse and repeat. |
 
 +++
 ## Starting small
