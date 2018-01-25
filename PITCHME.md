@@ -5,10 +5,10 @@ How to survive the rewrite without losing all hope
 
 ## My experience
 
-- Worked at 4 widely different companies
+- Worked at 4 widely different companies                    |
 - Youngest codebase 6+ years                                |
 - Weirdly similar problems                                  |
-- Efforts of lots of well meaning developers over the years |
+- Efforts of many well meaning developers over the years    |
 
 Note:
 
@@ -234,7 +234,7 @@ _You are hired to clean up this mess!_
 Note:
 
 ---
-### What can a poor developer do?
+#### What can a poor developer do?
 
 - Toxic sentiments |
   - "We'll rewrite this code soon anyway" |
@@ -246,7 +246,7 @@ A change in attitude helps a lot
 
 
 +++
-### What can a poor developer do?
+#### What can a poor developer do?
 
 > The only thing necessary for the triumph of evil is for good men to do nothing.
 >
