@@ -618,6 +618,27 @@ The append-only log
 
 ![Global log](assets/global-ordering.png)
 
+
++++
+## Event Sourcing
+
+Available databases:
+
+- EventStore (https://geteventstore.com) |
+- NEventStore           |
+- Apache Kafka(?)       |
+- Simple SQL-table!     |
+
++++
+## Event Sourcing
+
+| SequenceId | StreamId | Version | Type        | Body    |
+|------------|----------|---------|-------------|---------|
+| 1          |1234      | 1       | OrderPlaced | ...json |
+| 2          |2345      | 1       | OrderPlaced | ...json |
+| 3          |2345      | 2       | Approved    | ...json |
+| 4          |1234      | 2       | Cancelled   | ...json |
+
 +++
 ## Event Sourcing
 
@@ -677,4 +698,19 @@ Other benefits:
 - Migration easier (just replay the log)  |
 - New read models can be created          |
 
++++
+## Event Sourcing
+
+Low risk
+
+- Easy to go back to traditional DB |
+- Just replay the log               |
+
++++
+## Event Sourcing
+
+Gotchas
+
+- Eventual consistency                    |
+- Separate projections from side-effects  |
 
