@@ -5,7 +5,7 @@ How to survive the rewrite without losing all hope
 
 ## Disclaimer
 
-_This is probably all very obvious_
+_This is all probably very obvious_
 
 
 +++
