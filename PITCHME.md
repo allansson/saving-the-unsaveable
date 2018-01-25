@@ -234,15 +234,19 @@ _You are hired to clean up this mess!_
 Note:
 
 ---
-## What can a poor developer do?
+### What can a poor developer do?
 
 - Toxic sentiments |
   - "We'll rewrite this code soon anyway" |
   - "This code is s**t anyway, just do a dirty hack" |
   - "Easier to rewrite it all" |
 
+Note:
+A change in attitude helps a lot
+
+
 +++
-## What can a poor developer do?
+### What can a poor developer do?
 
 > The only thing necessary for the triumph of evil is for good men to do nothing.
 >
@@ -292,7 +296,7 @@ Note:
 ## Avoiding the pitfall
 
 - Don't kid yourself            |
-- Question your own knowledge   |
+- Think differently             |
   - how you write code          |
   - how your business operates  |
 - Start small                   |
@@ -301,11 +305,148 @@ Note:
 Pride goes before a fall
 
 ---
+
+## Thinking differently
+
+> Those who cannot remember the past are condemned to repeat it
+>
+> George Santayana
+
++++
+## Thinking differently
+
+Tried and true
+
+![Tried and true](assets/horizontal-design.png)
+
+Note:
+Adding a feature means updating UI, Service, Data and DB
+Must always be deployed 
+
++++
+## Thinking differently
+
+*_Warning_*: Don't create a data access service. 
+
+Note:
+It is not a small task
+All systems will still be tied to the database
+Added network latency and instability
+Code will not improve
+"Let's throw some SOAP/REST/GraphQL on it"
+
++++
+## Thinking differently
+
+Vertical pipes!
+
+![Vertical pipes](assets/vertical-pipes.png)
+
+Note:
+Solve many small problems separately.
+
++++
+## Thinking differently
+
+Thin pipes!
+
+![Thin pipes](assets/thinner-pipes.png)
+
+Note:
+The extreme end
+Each use-case can (theoretically) use its own tech-stack
+
+
+---
 ## Starting small
 
 How do you find a good spot when everything is tangled together?
 
 ![Jenga](assets/jenga.jpg)
+
++++
+
+Pick one thing the users can do today.
+
+- Something that kinda works |
+- Something that hurts to watch |
+- Something you spend a long time fixing |
+
++++
+
+Give it a name:
+
+- Place order     |
+- Cancel invoice  |
+- Claim reward    |
+
+Note:
+Capturing the intent of the user
+Intent need to be present in the code: PlaceOrder
+
+## Starting small
+
+Commands
+
+- PlaceOrder     |
+- CancelInvoice  |
+- ClaimReward    |
+
++++
+## Starting small
+
+```csharp
+public Changes Handle(PlaceOrder command)
+{
+  return Changes.Track(new OrderPlaced {
+    OrderNumber = GenerateOrderNumber(),
+    CustomerId = command.CustomerId,
+    Items = command.Items
+  });
+} 
+```
+
+Note:
+Ensure our code is focused on a specific task
+Tracking desired changes instead of commiting straight to database is very powerful
+
++++
+## Starting small
+
+Logging
+
+```csharp
+public Changes Handle(PlaceOrder command)
+{
+  logger.Log("Placing order");
+
+  var changes = next.Handle(command);
+
+  foreach (var ev in changes)
+  {
+    logger.Log(ev.ToString());
+  }
+
+  return changes;
+}
+
+```
+
++++
+## Staring small
+
+Pipeline:
+
+1. Authorize command
+2. Log command
+3. _Apply command_
+4. Commit changes
+5. On concurrency error, goto 3.
+6. Log command result 
+
+Note:
+Every command can be treated equally
+Write pipeline once only
 
 +++
 ## Starting small
@@ -321,14 +462,17 @@ Every system implements its own logic, and access the database in its own way.
 +++
 ## Starting small
 
-*_Warning_*: Don't create a data access service. 
 
-Note:
-It is not a small task
-All systems will still be tied to the database
-Added network latency and instability
-Code will not improve
-"Let's throw some SOAP/REST/GraphQL on it"
+
+
+## Starting small
+
+
+
+
+
+
+
 
 +++
 ## Starting small
@@ -346,6 +490,3 @@ Adding a NOT NULL-column to a table, with no DEFAULT
 
 It is not possible to make a god-model of a business and expect it to fit
 every use-case. 
-
-## Starting small
-
