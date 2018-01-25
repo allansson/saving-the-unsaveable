@@ -583,16 +583,23 @@ Pipeline, revisited
 
 The append-only log
 
+- Write your intent in a log  |
+- Replicate...                |
+
+Note:
+If a log entry is corrupt, it means the write
+never finished and can be ignored.
+
++++
+## Event Sourcing
+
+The append-only log
+
 - Databases already do it |
 - File systems do it  |
 - Version control systems do it |
 
 - Why can't our apps do it? |
-
-+++
-## Event Sourcing
-
-Write your intent in a log. Then replicate...
 
 +++
 ## Event Sourcing
