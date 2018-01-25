@@ -387,6 +387,7 @@ How do you find a good spot when everything is tangled together?
 ![Jenga](assets/jenga.jpg)
 
 +++
+## Starting small
 
 Pick one thing the users can do today.
 
