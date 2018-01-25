@@ -518,6 +518,7 @@ Start grouping commands together
 
 - Modify the same logical thing, e.g. order |
 - Requires the same data to validate        |
+- You're discovering your vertical pipes    |
 
 Note:
 Over time patterns will emerge
