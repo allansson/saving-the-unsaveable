@@ -8,7 +8,7 @@ How to survive the rewrite without losing all hope
 - Worked at 4 widely different companies                    |
 - Youngest codebase 6+ years                                |
 - Weirdly similar problems                                  |
-- Efforts of many well meaning developers over the years    |
+- Many well meaning developers over the years    |
 
 Note:
 
