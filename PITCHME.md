@@ -390,7 +390,7 @@ How do you find a good spot when everything is tangled together?
 Pick one thing the users can do today.
 
 - Something that kinda works |
-- Something that hurts to watch |
+- Some code that just hurts to watch |
 - Something you spend a long time fixing |
 
 +++
@@ -411,12 +411,13 @@ Intent need to be present in the code: PlaceOrder
 
 Analyze
 
-- Who does it?          |
+- What system does it?    |
 - What logic is vital?  | 
 - What side-effects does it have? |
-  - Sends an e-mail?
-  - 
+  - Sends an e-mail?  |
+  - Creates an invoice? |
 
++++
 ## Starting small
 
 Commands
@@ -505,31 +506,38 @@ public Changes Handle(Changes changes)
 +++
 ## Starting small
 
+Make sure every system writes using your new logic.
+
++++
+## Starting small
+
+Rinse and repeat.
+
++++
+## Starting small
+
+Start grouping commands together
+
+- Modify the same logical thing, e.g. order |
+- Requires the same data to validate        |
+
+Note:
+Over time patterns will emerge
+In DDD they are called Aggregates
+Things which must be commited to the database as a whole
+
+---
+## The real problem
+
 ![Spider-in-the-web](assets/database.png)
 
 _The heart of every system_
-
 
 Note:
 Every system implements its own logic, and access the database in its own way.
 
 +++
-## Starting small
-
-
-
-
-## Starting small
-
-
-
-
-
-
-
-
-+++
-## Starting small
+## The real problem
 
 Why is a shared database so bad?
 
@@ -538,9 +546,125 @@ Why is a shared database so bad?
 - Hard to write and read from it efficiently  |
 
 Note:
-Microservices _demand_ that databases not be shared
+Microservices _demand_ that databases not be shared. Why?
 
 Adding a NOT NULL-column to a table, with no DEFAULT
 
 It is not possible to make a god-model of a business and expect it to fit
 every use-case. 
+
++++
+## The real problem
+
+- Hard to separate while everybody reads |
+- Bi-directional syncing is hard         |
+
+Note:
+We don't want to have to rewrite every consumer of the database in one sweep.
+Thankfully, since we're taking care of writes, not bi-directional anymore.
+
++++
+
+## The real problem
+
+Pipeline, revisited
+
+...
+3. _Apply command_
+4. Commit changes
+5. On concurrency error, goto 3.
+6. Log command result 
+7. Perform side-effects
+
+- What if our network fails after committing? |
+- How do SQL-databases deal with this?        |
+
+---
+## Event Sourcing
+
+The append-only log
+
+- Databases already do it |
+- File systems do it  |
+- Version control systems do it |
+
+- Why can't our apps do it? |
+
++++
+## Event Sourcing
+
+- Save each change (event) instead of state |
+- A log of changes to an entity             |
+- A global log of all changes               |
+
++++
+## Event Sourcing
+
+![Entity log](assets/event-stream.png)
+
++++
+## Event Sourcing
+
+![Global log](assets/global-ordering.png)
+
++++
+## Event Sourcing
+
+Writes:
+
+- Read all events for #1234     |
+- Apply each in order to Order  |
+- Add new events                |
+- Try append at end of log      |
+
+Note:
+Keep a version of the Order to enable optimistic concurrency
+
++++
+## Event Sourcing
+
+Replication
+
+- `SELECT TOP 10 * FROM Events WHERE SequenceId > @LastProcessedId`
+- Run it in a thread |
+
++++
+## Event Sourcing
+
+Pipeline, revisited again
+
+...
+3. _Apply command_
+4. Commit changes
+5. On concurrency error, goto 3.
+6. Log command result
+
+Asynchronously:
+7. Perform side-effects
+
++++
+## Event Sourcing
+
+Write to the old database!
+
++++
+## Event Sourcing
+
+Deterministic
+
+- If we get it wrong:
+  - Fix code
+  - Reset @LastProcessedId to zero
+  - Data is automatically fixed
+
++++
+## Event Sourcing
+
+Other benefits:
+
+- Side-effects can be cleanly separated   |
+- No more "Steps to reproduce"            |
+- Migration easier (just replay the log)  |
+- New read models can be created          |
+
+
