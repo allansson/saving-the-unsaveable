@@ -532,7 +532,7 @@ Things which must be commited to the database as a whole
 _The heart of every system_
 
 Note:
-Every system implements its own logic, and access the database in its own way.
+We're still writing to one monolithic schema
 
 +++
 ## The real problem
